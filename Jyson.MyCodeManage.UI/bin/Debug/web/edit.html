@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Default Examples</title>
+    <style>
+        form
+        {
+            margin: 0;
+        }
+        textarea
+        {
+            display: block;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8" src="kindeditor.js"></script>
+    <script type="text/javascript" charset="utf-8" src="zh_CN.js"></script>
+    <script type="text/javascript" charset="utf-8" src="plugins/code/code.js"></script>
+    <script type="text/javascript" charset="utf-8" src="plugins/code/prettify.js"></script>
+    <script>
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('textarea[name="content"]', {
+                cssPath: 'plugins/code/prettify.css',
+                uploadJson: 'upload_json.ashx',
+                fileManagerJson: 'file_manager_json.ashx',
+                allowFileManager: true,
+                fullscreenMode: true
+            });
+            prettyPrint();
+        });
+        function getHtml() {
+            return editor.html();
+        };
+        function setHtml(htmlCode) {
+            editor.html(htmlCode);
+        };
+        function ClearHtml() {
+            editor.html('');
+        };
+    </script>
+</head>
+<body>
+    <form>
+    <textarea name="content" style="width: 800px; height: 400px; visibility: hidden;"></textarea>
+    </form>
+</body>
+</html>

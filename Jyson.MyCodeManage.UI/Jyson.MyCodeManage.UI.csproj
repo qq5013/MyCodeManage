@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73A7D24F-4F9D-4F0C-8CCE-4351267AF954}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jyson.MyCodeManage.UI</RootNamespace>
+    <AssemblyName>Jyson.MyCodeManage.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeManage\frmCodeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeManage\frmCodeType.Designer.cs">
+      <DependentUpon>frmCodeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeManage\frmEditOrAddCodeByHtml.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeManage\frmEditOrAddCodeByHtml.Designer.cs">
+      <DependentUpon>frmEditOrAddCodeByHtml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeManage\frmCodeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeManage\frmCodeManage.Designer.cs">
+      <DependentUpon>frmCodeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISplashForm.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCheckLog\frmEInsureLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCheckLog\frmEInsureLog.Designer.cs">
+      <DependentUpon>frmEInsureLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splasher.cs" />
+    <EmbeddedResource Include="CodeManage\frmCodeType.resx">
+      <DependentUpon>frmCodeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeManage\frmEditOrAddCodeByHtml.resx">
+      <DependentUpon>frmEditOrAddCodeByHtml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeManage\frmCodeManage.resx">
+      <DependentUpon>frmCodeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCheckLog\frmEInsureLog.resx">
+      <DependentUpon>frmEInsureLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="bin\Debug\web\asp.net\file_manager_json.ashx" />
+    <None Include="bin\Debug\web\asp.net\upload_json.ashx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jyson.MyCodeManage.BLL\Jyson.MyCodeManage.BLL.csproj">
+      <Project>{BBA77B10-63A1-4DAC-B0EB-99622CE4407F}</Project>
+      <Name>Jyson.MyCodeManage.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jyson.MyCodeManage.Model\Jyson.MyCodeManage.Model.csproj">
+      <Project>{252D9908-46B1-4EFE-A07D-D6840F5BE2AB}</Project>
+      <Name>Jyson.MyCodeManage.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jyson.MyCodeManage.Utility\Jyson.MyCodeManage.Utility.csproj">
+      <Project>{01C8933A-D09D-4188-BC07-F559DB647F46}</Project>
+      <Name>Jyson.MyCodeManage.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Approve.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_obj.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tool box.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\web\asp.net\bin\LitJSON.dll" />
+    <Content Include="bin\Debug\web\asp.net\demo.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="bin\Debug\web\asp.net\README.txt" />
+    <Content Include="bin\Debug\web\edit.html" />
+    <Content Include="bin\Debug\web\kindeditor.js" />
+    <Content Include="bin\Debug\web\license.txt" />
+    <Content Include="bin\Debug\web\plugins\anchor\anchor.js" />
+    <Content Include="bin\Debug\web\plugins\autoheight\autoheight.js" />
+    <Content Include="bin\Debug\web\plugins\baidumap\baidumap.js" />
+    <Content Include="bin\Debug\web\plugins\baidumap\index.html" />
+    <Content Include="bin\Debug\web\plugins\baidumap\map.html" />
+    <Content Include="bin\Debug\web\plugins\clearhtml\clearhtml.js" />
+    <Content Include="bin\Debug\web\plugins\code\code.js" />
+    <Content Include="bin\Debug\web\plugins\code\prettify.css" />
+    <Content Include="bin\Debug\web\plugins\code\prettify.js" />
+    <Content Include="bin\Debug\web\plugins\emoticons\emoticons.js" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\0.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\1.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\10.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\100.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\101.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\102.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\103.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\104.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\105.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\106.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\107.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\108.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\109.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\11.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\110.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\111.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\112.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\113.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\114.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\115.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\116.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\117.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\118.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\119.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\12.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\120.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\121.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\122.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\123.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\124.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\125.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\126.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\127.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\128.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\129.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\13.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\130.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\131.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\132.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\133.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\134.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\14.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\15.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\16.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\17.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\18.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\19.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\2.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\20.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\21.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\22.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\23.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\24.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\25.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\26.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\27.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\28.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\29.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\3.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\30.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\31.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\32.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\33.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\34.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\35.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\36.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\37.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\38.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\39.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\4.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\40.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\41.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\42.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\43.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\44.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\45.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\46.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\47.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\48.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\49.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\5.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\50.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\51.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\52.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\53.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\54.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\55.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\56.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\57.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\58.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\59.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\6.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\60.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\61.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\62.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\63.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\64.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\65.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\66.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\67.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\68.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\69.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\7.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\70.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\71.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\72.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\73.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\74.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\75.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\76.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\77.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\78.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\79.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\8.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\80.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\81.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\82.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\83.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\84.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\85.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\86.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\87.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\88.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\89.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\9.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\90.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\91.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\92.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\93.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\94.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\95.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\96.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\97.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\98.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\99.gif" />
+    <Content Include="bin\Debug\web\plugins\emoticons\images\static.gif" />
+    <Content Include="bin\Debug\web\plugins\filemanager\filemanager.js" />
+    <Content Include="bin\Debug\web\plugins\filemanager\images\file-16.gif" />
+    <Content Include="bin\Debug\web\plugins\filemanager\images\file-64.gif" />
+    <Content Include="bin\Debug\web\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="bin\Debug\web\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="bin\Debug\web\plugins\filemanager\images\go-up.gif" />
+    <Content Include="bin\Debug\web\plugins\flash\flash.js" />
+    <Content Include="bin\Debug\web\plugins\image\image.js" />
+    <Content Include="bin\Debug\web\plugins\image\images\align_left.gif" />
+    <Content Include="bin\Debug\web\plugins\image\images\align_right.gif" />
+    <Content Include="bin\Debug\web\plugins\image\images\align_top.gif" />
+    <Content Include="bin\Debug\web\plugins\image\images\refresh.png" />
+    <Content Include="bin\Debug\web\plugins\insertfile\insertfile.js" />
+    <Content Include="bin\Debug\web\plugins\lineheight\lineheight.js" />
+    <Content Include="bin\Debug\web\plugins\link\link.js" />
+    <Content Include="bin\Debug\web\plugins\map\map.html" />
+    <Content Include="bin\Debug\web\plugins\map\map.js" />
+    <Content Include="bin\Debug\web\plugins\media\media.js" />
+    <Content Include="bin\Debug\web\plugins\multiimage\images\image.png" />
+    <Content Include="bin\Debug\web\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="bin\Debug\web\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="bin\Debug\web\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="bin\Debug\web\plugins\multiimage\multiimage.js" />
+    <Content Include="bin\Debug\web\plugins\pagebreak\pagebreak.js" />
+    <Content Include="bin\Debug\web\plugins\plainpaste\plainpaste.js" />
+    <Content Include="bin\Debug\web\plugins\preview\preview.js" />
+    <Content Include="bin\Debug\web\plugins\quickformat\quickformat.js" />
+    <Content Include="bin\Debug\web\plugins\table\table.js" />
+    <Content Include="bin\Debug\web\plugins\template\html\1.html" />
+    <Content Include="bin\Debug\web\plugins\template\html\2.html" />
+    <Content Include="bin\Debug\web\plugins\template\html\3.html" />
+    <Content Include="bin\Debug\web\plugins\template\template.js" />
+    <Content Include="bin\Debug\web\plugins\wordpaste\wordpaste.js" />
+    <Content Include="bin\Debug\web\Show.html" />
+    <Content Include="bin\Debug\web\themes\common\anchor.gif" />
+    <Content Include="bin\Debug\web\themes\common\blank.gif" />
+    <Content Include="bin\Debug\web\themes\common\flash.gif" />
+    <Content Include="bin\Debug\web\themes\common\loading.gif" />
+    <Content Include="bin\Debug\web\themes\common\media.gif" />
+    <Content Include="bin\Debug\web\themes\common\rm.gif" />
+    <Content Include="bin\Debug\web\themes\default\background.png" />
+    <Content Include="bin\Debug\web\themes\default\default.css" />
+    <Content Include="bin\Debug\web\themes\default\default.png" />
+    <Content Include="bin\Debug\web\themes\qq\editor.gif" />
+    <Content Include="bin\Debug\web\themes\qq\qq.css" />
+    <Content Include="bin\Debug\web\themes\simple\simple.css" />
+    <Content Include="bin\Debug\web\zh_CN.js" />
+    <None Include="Resources\monitor.png" />
+    <None Include="Resources\29.ico" />
+    <None Include="Resources\endorse.gif" />
+    <None Include="Resources\Closing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
