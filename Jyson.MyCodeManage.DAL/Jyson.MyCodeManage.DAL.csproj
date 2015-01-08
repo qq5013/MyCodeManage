@@ -44,8 +44,13 @@
     <Compile Include="CodeType.cs" />
     <Compile Include="MyCode\CodeContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMSRecord.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Jyson.MyCodeManage.DBUtility\Jyson.MyCodeManage.DBUtility.csproj">
+      <Project>{f309fe18-f79d-4e87-b9f2-68db1bd1a29e}</Project>
+      <Name>Jyson.MyCodeManage.DBUtility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Jyson.MyCodeManage.Model\Jyson.MyCodeManage.Model.csproj">
       <Project>{252D9908-46B1-4EFE-A07D-D6840F5BE2AB}</Project>
       <Name>Jyson.MyCodeManage.Model</Name>

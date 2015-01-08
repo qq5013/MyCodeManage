@@ -1,0 +1,6 @@
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DBUtility\bin\Debug\Jyson.MyCodeManage.DBUtility.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DBUtility\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DBUtility\bin\Debug\MySql.Data.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DBUtility\bin\Debug\System.Data.SQLite.DLL
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DBUtility\obj\Debug\Jyson.MyCodeManage.DBUtility.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DBUtility\obj\Debug\Jyson.MyCodeManage.DBUtility.pdb

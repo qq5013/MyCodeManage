@@ -16,3 +16,7 @@ G:\solution\MyCodeManage\Jyson.MyCodeManage.Model\bin\Debug\Jyson.MyCodeManage.M
 G:\solution\MyCodeManage\Jyson.MyCodeManage.Model\obj\Debug\Jyson.MyCodeManage.Model.csprojResolveAssemblyReference.cache
 G:\solution\MyCodeManage\Jyson.MyCodeManage.Model\obj\Debug\Jyson.MyCodeManage.Model.dll
 G:\solution\MyCodeManage\Jyson.MyCodeManage.Model\obj\Debug\Jyson.MyCodeManage.Model.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.Model\bin\Debug\Jyson.MyCodeManage.Model.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.Model\bin\Debug\Jyson.MyCodeManage.Model.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.Model\obj\Debug\Jyson.MyCodeManage.Model.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.Model\obj\Debug\Jyson.MyCodeManage.Model.pdb

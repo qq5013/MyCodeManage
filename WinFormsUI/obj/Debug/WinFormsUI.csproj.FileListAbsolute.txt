@@ -22,3 +22,12 @@ G:\solution\MyCodeManage\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.Strin
 G:\solution\MyCodeManage\WinFormsUI\obj\Debug\WinFormsUI.csproj.GenerateResource.Cache
 G:\solution\MyCodeManage\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.dll
 G:\solution\MyCodeManage\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.pdb
+E:\solution\MyCodeManage\WinFormsUI\bin\Debug\license.txt
+E:\solution\MyCodeManage\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\solution\MyCodeManage\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.pdb
+E:\solution\MyCodeManage\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.Resources.resources
+E:\solution\MyCodeManage\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.Strings.resources
+E:\solution\MyCodeManage\WinFormsUI\obj\Debug\WinFormsUI.csproj.GenerateResource.Cache
+E:\solution\MyCodeManage\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\solution\MyCodeManage\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.pdb
+E:\solution\MyCodeManage\WinFormsUI\obj\Debug\WinFormsUI.csprojResolveAssemblyReference.cache

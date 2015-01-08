@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             WeifenLuo.WinFormsUI.Docking.DockPanelSkin dockPanelSkin1 = new WeifenLuo.WinFormsUI.Docking.DockPanelSkin();
             WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin autoHideStripSkin1 = new WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin();
             WeifenLuo.WinFormsUI.Docking.DockPanelGradient dockPanelGradient1 = new WeifenLuo.WinFormsUI.Docking.DockPanelGradient();
@@ -43,7 +44,6 @@
             WeifenLuo.WinFormsUI.Docking.DockPanelGradient dockPanelGradient3 = new WeifenLuo.WinFormsUI.Docking.DockPanelGradient();
             WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient6 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
             WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient7 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemClose = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,21 +52,20 @@
             this.menuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.助手ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemB2BMemo = new System.Windows.Forms.ToolStripMenuItem();
-            this.日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemEInsureLog = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemShowDocumentIcon = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolBar = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolBarB2BMemo = new System.Windows.Forms.ToolStripButton();
-            this.toolBarEinsureLog = new System.Windows.Forms.ToolStripButton();
-            this.toolBarMstsc = new System.Windows.Forms.ToolStripButton();
             this.menuItemNotepad = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemCalc = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemMstsc = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBar = new System.Windows.Forms.ToolStrip();
+            this.toolBarB2BMemo = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolBarMstsc = new System.Windows.Forms.ToolStripButton();
+            this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.menuItemSMSCode = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBarSMSCode = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolBar.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +76,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemFile,
             this.助手ToolStripMenuItem,
-            this.日志ToolStripMenuItem,
             this.工具ToolStripMenuItem,
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -100,35 +98,36 @@
             // menuItemClose
             // 
             this.menuItemClose.Name = "menuItemClose";
-            this.menuItemClose.Size = new System.Drawing.Size(148, 22);
+            this.menuItemClose.Size = new System.Drawing.Size(152, 22);
             this.menuItemClose.Text = "关闭";
             this.menuItemClose.Click += new System.EventHandler(this.menuItemClose_Click);
             // 
             // menuItemCloseAll
             // 
             this.menuItemCloseAll.Name = "menuItemCloseAll";
-            this.menuItemCloseAll.Size = new System.Drawing.Size(148, 22);
+            this.menuItemCloseAll.Size = new System.Drawing.Size(152, 22);
             this.menuItemCloseAll.Text = "关闭全部";
             this.menuItemCloseAll.Click += new System.EventHandler(this.menuItemCloseAll_Click);
             // 
             // menuItemCloseAllButThisOne
             // 
             this.menuItemCloseAllButThisOne.Name = "menuItemCloseAllButThisOne";
-            this.menuItemCloseAllButThisOne.Size = new System.Drawing.Size(148, 22);
+            this.menuItemCloseAllButThisOne.Size = new System.Drawing.Size(152, 22);
             this.menuItemCloseAllButThisOne.Text = "关闭其它窗体";
             this.menuItemCloseAllButThisOne.Click += new System.EventHandler(this.menuItemCloseAllButThisOne_Click);
             // 
             // menuItemExit
             // 
             this.menuItemExit.Name = "menuItemExit";
-            this.menuItemExit.Size = new System.Drawing.Size(148, 22);
+            this.menuItemExit.Size = new System.Drawing.Size(152, 22);
             this.menuItemExit.Text = "退出";
             this.menuItemExit.Click += new System.EventHandler(this.menuItemExit_Click);
             // 
             // 助手ToolStripMenuItem
             // 
             this.助手ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemB2BMemo});
+            this.menuItemB2BMemo,
+            this.menuItemSMSCode});
             this.助手ToolStripMenuItem.Name = "助手ToolStripMenuItem";
             this.助手ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
             this.助手ToolStripMenuItem.Text = "助手(Z)";
@@ -136,24 +135,9 @@
             // menuItemB2BMemo
             // 
             this.menuItemB2BMemo.Name = "menuItemB2BMemo";
-            this.menuItemB2BMemo.Size = new System.Drawing.Size(123, 22);
-            this.menuItemB2BMemo.Text = "B2B备忘";
+            this.menuItemB2BMemo.Size = new System.Drawing.Size(152, 22);
+            this.menuItemB2BMemo.Text = "PP备忘";
             this.menuItemB2BMemo.Click += new System.EventHandler(this.menuItemB2BMemo_Click);
-            // 
-            // 日志ToolStripMenuItem
-            // 
-            this.日志ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemEInsureLog});
-            this.日志ToolStripMenuItem.Name = "日志ToolStripMenuItem";
-            this.日志ToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
-            this.日志ToolStripMenuItem.Text = "日志(R)";
-            // 
-            // menuItemEInsureLog
-            // 
-            this.menuItemEInsureLog.Name = "menuItemEInsureLog";
-            this.menuItemEInsureLog.Size = new System.Drawing.Size(124, 22);
-            this.menuItemEInsureLog.Text = "保险日志";
-            this.menuItemEInsureLog.Click += new System.EventHandler(this.menuItemEInsureLog_Click);
             // 
             // 工具ToolStripMenuItem
             // 
@@ -173,6 +157,30 @@
             this.menuItemShowDocumentIcon.Text = "显示窗体图标";
             this.menuItemShowDocumentIcon.Click += new System.EventHandler(this.menuItemShowDocumentIcon_Click);
             // 
+            // menuItemNotepad
+            // 
+            this.menuItemNotepad.Image = ((System.Drawing.Image)(resources.GetObject("menuItemNotepad.Image")));
+            this.menuItemNotepad.Name = "menuItemNotepad";
+            this.menuItemNotepad.Size = new System.Drawing.Size(152, 22);
+            this.menuItemNotepad.Text = "记事本";
+            this.menuItemNotepad.Click += new System.EventHandler(this.menuItemNotepad_Click);
+            // 
+            // menuItemCalc
+            // 
+            this.menuItemCalc.Image = global::Jyson.MyCodeManage.UI.Properties.Resources._29;
+            this.menuItemCalc.Name = "menuItemCalc";
+            this.menuItemCalc.Size = new System.Drawing.Size(152, 22);
+            this.menuItemCalc.Text = "计算器";
+            this.menuItemCalc.Click += new System.EventHandler(this.menuItemCalc_Click);
+            // 
+            // menuItemMstsc
+            // 
+            this.menuItemMstsc.Image = global::Jyson.MyCodeManage.UI.Properties.Resources.monitor;
+            this.menuItemMstsc.Name = "menuItemMstsc";
+            this.menuItemMstsc.Size = new System.Drawing.Size(152, 22);
+            this.menuItemMstsc.Text = "远程桌面";
+            this.menuItemMstsc.Click += new System.EventHandler(this.menuItemMstsc_Click);
+            // 
             // 帮助ToolStripMenuItem
             // 
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
@@ -185,7 +193,7 @@
             this.toolBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBarB2BMemo,
             this.toolStripSeparator1,
-            this.toolBarEinsureLog,
+            this.toolBarSMSCode,
             this.toolStripSeparator2,
             this.toolBarMstsc});
             this.toolBar.Location = new System.Drawing.Point(0, 25);
@@ -195,10 +203,29 @@
             this.toolBar.Text = "toolStrip1";
             this.toolBar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolBar_ItemClicked);
             // 
+            // toolBarB2BMemo
+            // 
+            this.toolBarB2BMemo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.toolBarB2BMemo.Image = ((System.Drawing.Image)(resources.GetObject("toolBarB2BMemo.Image")));
+            this.toolBarB2BMemo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBarB2BMemo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBarB2BMemo.Name = "toolBarB2BMemo";
+            this.toolBarB2BMemo.Size = new System.Drawing.Size(82, 36);
+            this.toolBarB2BMemo.Text = "PP备忘";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolBarMstsc
+            // 
+            this.toolBarMstsc.Image = ((System.Drawing.Image)(resources.GetObject("toolBarMstsc.Image")));
+            this.toolBarMstsc.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBarMstsc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBarMstsc.Name = "toolBarMstsc";
+            this.toolBarMstsc.Size = new System.Drawing.Size(92, 36);
+            this.toolBarMstsc.Text = "远程桌面";
             // 
             // dockPanel
             // 
@@ -257,62 +284,25 @@
             this.dockPanel.Skin = dockPanelSkin1;
             this.dockPanel.TabIndex = 2;
             // 
+            // menuItemSMSCode
+            // 
+            this.menuItemSMSCode.Name = "menuItemSMSCode";
+            this.menuItemSMSCode.Size = new System.Drawing.Size(152, 22);
+            this.menuItemSMSCode.Text = "SMS验证码";
+            this.menuItemSMSCode.Click += new System.EventHandler(this.menuItemSMSCode_Click);
+            // 
+            // toolBarSMSCode
+            // 
+            this.toolBarSMSCode.Image = ((System.Drawing.Image)(resources.GetObject("toolBarSMSCode.Image")));
+            this.toolBarSMSCode.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBarSMSCode.Name = "toolBarSMSCode";
+            this.toolBarSMSCode.Size = new System.Drawing.Size(90, 36);
+            this.toolBarSMSCode.Text = "SMS验证码";
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolBarB2BMemo
-            // 
-            this.toolBarB2BMemo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.toolBarB2BMemo.Image = ((System.Drawing.Image)(resources.GetObject("toolBarB2BMemo.Image")));
-            this.toolBarB2BMemo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBarB2BMemo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBarB2BMemo.Name = "toolBarB2BMemo";
-            this.toolBarB2BMemo.Size = new System.Drawing.Size(91, 36);
-            this.toolBarB2BMemo.Text = "B2B备忘";
-            // 
-            // toolBarEinsureLog
-            // 
-            this.toolBarEinsureLog.Image = ((System.Drawing.Image)(resources.GetObject("toolBarEinsureLog.Image")));
-            this.toolBarEinsureLog.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBarEinsureLog.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBarEinsureLog.Name = "toolBarEinsureLog";
-            this.toolBarEinsureLog.Size = new System.Drawing.Size(92, 36);
-            this.toolBarEinsureLog.Text = "保险日志";
-            // 
-            // toolBarMstsc
-            // 
-            this.toolBarMstsc.Image = ((System.Drawing.Image)(resources.GetObject("toolBarMstsc.Image")));
-            this.toolBarMstsc.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBarMstsc.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBarMstsc.Name = "toolBarMstsc";
-            this.toolBarMstsc.Size = new System.Drawing.Size(92, 36);
-            this.toolBarMstsc.Text = "远程桌面";
-            // 
-            // menuItemNotepad
-            // 
-            this.menuItemNotepad.Image = ((System.Drawing.Image)(resources.GetObject("menuItemNotepad.Image")));
-            this.menuItemNotepad.Name = "menuItemNotepad";
-            this.menuItemNotepad.Size = new System.Drawing.Size(152, 22);
-            this.menuItemNotepad.Text = "记事本";
-            this.menuItemNotepad.Click += new System.EventHandler(this.menuItemNotepad_Click);
-            // 
-            // menuItemCalc
-            // 
-            this.menuItemCalc.Image = global::Jyson.MyCodeManage.UI.Properties.Resources._29;
-            this.menuItemCalc.Name = "menuItemCalc";
-            this.menuItemCalc.Size = new System.Drawing.Size(152, 22);
-            this.menuItemCalc.Text = "计算器";
-            this.menuItemCalc.Click += new System.EventHandler(this.menuItemCalc_Click);
-            // 
-            // menuItemMstsc
-            // 
-            this.menuItemMstsc.Image = global::Jyson.MyCodeManage.UI.Properties.Resources.monitor;
-            this.menuItemMstsc.Name = "menuItemMstsc";
-            this.menuItemMstsc.Size = new System.Drawing.Size(152, 22);
-            this.menuItemMstsc.Text = "远程桌面";
-            this.menuItemMstsc.Click += new System.EventHandler(this.menuItemMstsc_Click);
             // 
             // MainForm
             // 
@@ -328,7 +318,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "纵横助手";
+            this.Text = "PPMoney助手";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -345,14 +335,11 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemFile;
         private System.Windows.Forms.ToolStripMenuItem 助手ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuItemB2BMemo;
-        private System.Windows.Forms.ToolStripMenuItem 日志ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuItemEInsureLog;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolBar;
         private System.Windows.Forms.ToolStripButton toolBarB2BMemo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolBarEinsureLog;
         private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel;
         private System.Windows.Forms.ToolStripMenuItem menuItemClose;
         private System.Windows.Forms.ToolStripMenuItem menuItemCloseAll;
@@ -362,8 +349,10 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemNotepad;
         private System.Windows.Forms.ToolStripMenuItem menuItemCalc;
         private System.Windows.Forms.ToolStripMenuItem menuItemMstsc;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolBarMstsc;
+        private System.Windows.Forms.ToolStripMenuItem menuItemSMSCode;
+        private System.Windows.Forms.ToolStripButton toolBarSMSCode;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 
     }
 }

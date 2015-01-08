@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jyson.MyCodeManage.DAL", "Jyson.MyCodeManage.DAL\Jyson.MyCodeManage.DAL.csproj", "{7192084E-41BA-4A54-AC10-A6BEF4CC70FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jyson.MyCodeManage.Model", "Jyson.MyCodeManage.Model\Jyson.MyCodeManage.Model.csproj", "{252D9908-46B1-4EFE-A07D-D6840F5BE2AB}"
@@ -12,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jyson.MyCodeManage.Utility", "Jyson.MyCodeManage.Utility\Jyson.MyCodeManage.Utility.csproj", "{01C8933A-D09D-4188-BC07-F559DB647F46}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsUI", "WinFormsUI\WinFormsUI.csproj", "{C75532C4-765B-418E-B09B-46D36B2ABDB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jyson.MyCodeManage.DBUtility", "Jyson.MyCodeManage.DBUtility\Jyson.MyCodeManage.DBUtility.csproj", "{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +87,16 @@ Global
 		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Release|x86.ActiveCfg = Release|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F309FE18-F79D-4E87-B9F2-68DB1BD1A29E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

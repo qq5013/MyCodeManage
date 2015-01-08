@@ -44,6 +44,7 @@
     <Compile Include="CodeType.cs" />
     <Compile Include="MyCode\CodeContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMSRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jyson.MyCodeManage.DAL\Jyson.MyCodeManage.DAL.csproj">

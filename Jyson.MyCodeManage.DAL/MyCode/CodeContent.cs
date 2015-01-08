@@ -3,6 +3,7 @@ using System.Data;
 using System.Text;
 using System.Data.OleDb;
 using Jyson.MyCodeManage.Utility;
+using Jyson.MyCodeManage.DBUtility;
 namespace Jyson.MyCodeManage.DAL
 {
     /// <summary>

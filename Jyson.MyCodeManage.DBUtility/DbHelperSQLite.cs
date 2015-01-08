@@ -2,27 +2,26 @@
 using System.Collections;
 using System.Collections.Specialized;
 using System.Data;
-using System.Data.OleDb;
 using System.Configuration;
-using System.Windows.Forms;
-
-namespace Jyson.MyCodeManage.Utility
+using System.Data.SQLite;
+namespace Jyson.MyCodeManage.DBUtility
 {
     /// <summary>
-    /// 数据访问基础类(基于OleDb) Copyright (C) Maticsoft
+    /// Copyright (C) 2011 Jyson.MyCodeManage 
+    /// 数据访问基础类(基于SQLite)
     /// 可以用户可以修改满足自己项目的需要。
     /// </summary>
-    public abstract class DbHelperOleDb
+    public abstract class DbHelperSQLite
     {
         //数据库连接字符串(web.config来配置)，可以动态更改connectionString支持多数据库.		
-        public static string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\" + ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;   
-        public DbHelperOleDb()
+        public static string connectionString = PubConstant.ConnectionString;
+        public DbHelperSQLite()
         {
         }
 
 
         #region 公用方法
-
+       
         public static int GetMaxID(string FieldName, string TableName)
         {
             string strsql = "select max(" + FieldName + ")+1 from " + TableName;
@@ -57,7 +56,7 @@ namespace Jyson.MyCodeManage.Utility
                 return true;
             }
         }
-        public static bool Exists(string strSql, params OleDbParameter[] cmdParms)
+        public static bool Exists(string strSql, params SQLiteParameter[] cmdParms)
         {
             object obj = GetSingle(strSql, cmdParms);
             int cmdresult;
@@ -90,9 +89,9 @@ namespace Jyson.MyCodeManage.Utility
         /// <returns>影响的记录数</returns>
         public static int ExecuteSql(string SQLString)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                using (OleDbCommand cmd = new OleDbCommand(SQLString, connection))
+                using (SQLiteCommand cmd = new SQLiteCommand(SQLString, connection))
                 {
                     try
                     {
@@ -100,7 +99,7 @@ namespace Jyson.MyCodeManage.Utility
                         int rows = cmd.ExecuteNonQuery();
                         return rows;
                     }
-                    catch (System.Data.OleDb.OleDbException E)
+                    catch (System.Data.SQLite.SQLiteException E)
                     {
                         connection.Close();
                         throw new Exception(E.Message);
@@ -115,12 +114,12 @@ namespace Jyson.MyCodeManage.Utility
         /// <param name="SQLStringList">多条SQL语句</param>		
         public static void ExecuteSqlTran(ArrayList SQLStringList)
         {
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                OleDbCommand cmd = new OleDbCommand();
+                SQLiteCommand cmd = new SQLiteCommand();
                 cmd.Connection = conn;
-                OleDbTransaction tx = conn.BeginTransaction();
+                SQLiteTransaction tx = conn.BeginTransaction();
                 cmd.Transaction = tx;
                 try
                 {
@@ -135,7 +134,7 @@ namespace Jyson.MyCodeManage.Utility
                     }
                     tx.Commit();
                 }
-                catch (System.Data.OleDb.OleDbException E)
+                catch (System.Data.SQLite.SQLiteException E)
                 {
                     tx.Rollback();
                     throw new Exception(E.Message);
@@ -150,10 +149,10 @@ namespace Jyson.MyCodeManage.Utility
         /// <returns>影响的记录数</returns>
         public static int ExecuteSql(string SQLString, string content)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                OleDbCommand cmd = new OleDbCommand(SQLString, connection);
-                System.Data.OleDb.OleDbParameter myParameter = new System.Data.OleDb.OleDbParameter("@content", OleDbType.VarChar);
+                SQLiteCommand cmd = new SQLiteCommand(SQLString, connection);
+                SQLiteParameter myParameter = new SQLiteParameter("@content", DbType.String);
                 myParameter.Value = content;
                 cmd.Parameters.Add(myParameter);
                 try
@@ -162,7 +161,7 @@ namespace Jyson.MyCodeManage.Utility
                     int rows = cmd.ExecuteNonQuery();
                     return rows;
                 }
-                catch (System.Data.OleDb.OleDbException E)
+                catch (System.Data.SQLite.SQLiteException E)
                 {
                     throw new Exception(E.Message);
                 }
@@ -181,10 +180,10 @@ namespace Jyson.MyCodeManage.Utility
         /// <returns>影响的记录数</returns>
         public static int ExecuteSqlInsertImg(string strSQL, byte[] fs)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                OleDbCommand cmd = new OleDbCommand(strSQL, connection);
-                System.Data.OleDb.OleDbParameter myParameter = new System.Data.OleDb.OleDbParameter("@fs", OleDbType.Binary);
+                SQLiteCommand cmd = new SQLiteCommand(strSQL, connection);
+                SQLiteParameter myParameter = new SQLiteParameter("@fs", DbType.Binary);
                 myParameter.Value = fs;
                 cmd.Parameters.Add(myParameter);
                 try
@@ -193,7 +192,7 @@ namespace Jyson.MyCodeManage.Utility
                     int rows = cmd.ExecuteNonQuery();
                     return rows;
                 }
-                catch (System.Data.OleDb.OleDbException E)
+                catch (System.Data.SQLite.SQLiteException E)
                 {
                     throw new Exception(E.Message);
                 }
@@ -212,9 +211,9 @@ namespace Jyson.MyCodeManage.Utility
         /// <returns>查询结果（object）</returns>
         public static object GetSingle(string SQLString)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                using (OleDbCommand cmd = new OleDbCommand(SQLString, connection))
+                using (SQLiteCommand cmd = new SQLiteCommand(SQLString, connection))
                 {
                     try
                     {
@@ -229,7 +228,7 @@ namespace Jyson.MyCodeManage.Utility
                             return obj;
                         }
                     }
-                    catch (System.Data.OleDb.OleDbException e)
+                    catch (System.Data.SQLite.SQLiteException e)
                     {
                         connection.Close();
                         throw new Exception(e.Message);
@@ -238,21 +237,21 @@ namespace Jyson.MyCodeManage.Utility
             }
         }
         /// <summary>
-        /// 执行查询语句，返回OleDbDataReader
+        /// 执行查询语句，返回SQLiteDataReader
         /// </summary>
         /// <param name="strSQL">查询语句</param>
-        /// <returns>OleDbDataReader</returns>
-        public static OleDbDataReader ExecuteReader(string strSQL)
+        /// <returns>SQLiteDataReader</returns>
+        public static SQLiteDataReader ExecuteReader(string strSQL)
         {
-            OleDbConnection connection = new OleDbConnection(connectionString);
-            OleDbCommand cmd = new OleDbCommand(strSQL, connection);
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
+            SQLiteCommand cmd = new SQLiteCommand(strSQL, connection);
             try
             {
                 connection.Open();
-                OleDbDataReader myReader = cmd.ExecuteReader();
+                SQLiteDataReader myReader = cmd.ExecuteReader();
                 return myReader;
             }
-            catch (System.Data.OleDb.OleDbException e)
+            catch (System.Data.SQLite.SQLiteException e)
             {
                 throw new Exception(e.Message);
             }
@@ -265,16 +264,16 @@ namespace Jyson.MyCodeManage.Utility
         /// <returns>DataSet</returns>
         public static DataSet Query(string SQLString)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 DataSet ds = new DataSet();
                 try
                 {
                     connection.Open();
-                    OleDbDataAdapter command = new OleDbDataAdapter(SQLString, connection);
+                    SQLiteDataAdapter command = new SQLiteDataAdapter(SQLString, connection);
                     command.Fill(ds, "ds");
                 }
-                catch (System.Data.OleDb.OleDbException ex)
+                catch (System.Data.SQLite.SQLiteException ex)
                 {
                     throw new Exception(ex.Message);
                 }
@@ -292,11 +291,11 @@ namespace Jyson.MyCodeManage.Utility
         /// </summary>
         /// <param name="SQLString">SQL语句</param>
         /// <returns>影响的记录数</returns>
-        public static int ExecuteSql(string SQLString, params OleDbParameter[] cmdParms)
+        public static int ExecuteSql(string SQLString, params SQLiteParameter[] cmdParms)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                using (OleDbCommand cmd = new OleDbCommand())
+                using (SQLiteCommand cmd = new SQLiteCommand())
                 {
                     try
                     {
@@ -305,7 +304,7 @@ namespace Jyson.MyCodeManage.Utility
                         cmd.Parameters.Clear();
                         return rows;
                     }
-                    catch (System.Data.OleDb.OleDbException E)
+                    catch (System.Data.SQLite.SQLiteException E)
                     {
                         throw new Exception(E.Message);
                     }
@@ -317,22 +316,22 @@ namespace Jyson.MyCodeManage.Utility
         /// <summary>
         /// 执行多条SQL语句，实现数据库事务。
         /// </summary>
-        /// <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的OleDbParameter[]）</param>
+        /// <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的SQLiteParameter[]）</param>
         public static void ExecuteSqlTran(Hashtable SQLStringList)
         {
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                using (OleDbTransaction trans = conn.BeginTransaction())
+                using (SQLiteTransaction trans = conn.BeginTransaction())
                 {
-                    OleDbCommand cmd = new OleDbCommand();
+                    SQLiteCommand cmd = new SQLiteCommand();
                     try
                     {
                         //循环
                         foreach (DictionaryEntry myDE in SQLStringList)
                         {
                             string cmdText = myDE.Key.ToString();
-                            OleDbParameter[] cmdParms = (OleDbParameter[])myDE.Value;
+                            SQLiteParameter[] cmdParms = (SQLiteParameter[])myDE.Value;
                             PrepareCommand(cmd, conn, trans, cmdText, cmdParms);
                             int val = cmd.ExecuteNonQuery();
                             cmd.Parameters.Clear();
@@ -355,11 +354,11 @@ namespace Jyson.MyCodeManage.Utility
         /// </summary>
         /// <param name="SQLString">计算查询结果语句</param>
         /// <returns>查询结果（object）</returns>
-        public static object GetSingle(string SQLString, params OleDbParameter[] cmdParms)
+        public static object GetSingle(string SQLString, params SQLiteParameter[] cmdParms)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                using (OleDbCommand cmd = new OleDbCommand())
+                using (SQLiteCommand cmd = new SQLiteCommand())
                 {
                     try
                     {
@@ -375,7 +374,7 @@ namespace Jyson.MyCodeManage.Utility
                             return obj;
                         }
                     }
-                    catch (System.Data.OleDb.OleDbException e)
+                    catch (System.Data.SQLite.SQLiteException e)
                     {
                         throw new Exception(e.Message);
                     }
@@ -384,22 +383,22 @@ namespace Jyson.MyCodeManage.Utility
         }
 
         /// <summary>
-        /// 执行查询语句，返回OleDbDataReader
+        /// 执行查询语句，返回SQLiteDataReader
         /// </summary>
         /// <param name="strSQL">查询语句</param>
-        /// <returns>OleDbDataReader</returns>
-        public static OleDbDataReader ExecuteReader(string SQLString, params OleDbParameter[] cmdParms)
+        /// <returns>SQLiteDataReader</returns>
+        public static SQLiteDataReader ExecuteReader(string SQLString, params SQLiteParameter[] cmdParms)
         {
-            OleDbConnection connection = new OleDbConnection(connectionString);
-            OleDbCommand cmd = new OleDbCommand();
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
+            SQLiteCommand cmd = new SQLiteCommand();
             try
             {
                 PrepareCommand(cmd, connection, null, SQLString, cmdParms);
-                OleDbDataReader myReader = cmd.ExecuteReader();
+                SQLiteDataReader myReader = cmd.ExecuteReader();
                 cmd.Parameters.Clear();
                 return myReader;
             }
-            catch (System.Data.OleDb.OleDbException e)
+            catch (System.Data.SQLite.SQLiteException e)
             {
                 throw new Exception(e.Message);
             }
@@ -411,13 +410,13 @@ namespace Jyson.MyCodeManage.Utility
         /// </summary>
         /// <param name="SQLString">查询语句</param>
         /// <returns>DataSet</returns>
-        public static DataSet Query(string SQLString, params OleDbParameter[] cmdParms)
+        public static DataSet Query(string SQLString, params SQLiteParameter[] cmdParms)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                OleDbCommand cmd = new OleDbCommand();
+                SQLiteCommand cmd = new SQLiteCommand();
                 PrepareCommand(cmd, connection, null, SQLString, cmdParms);
-                using (OleDbDataAdapter da = new OleDbDataAdapter(cmd))
+                using (SQLiteDataAdapter da = new SQLiteDataAdapter(cmd))
                 {
                     DataSet ds = new DataSet();
                     try
@@ -425,7 +424,7 @@ namespace Jyson.MyCodeManage.Utility
                         da.Fill(ds, "ds");
                         cmd.Parameters.Clear();
                     }
-                    catch (System.Data.OleDb.OleDbException ex)
+                    catch (System.Data.SQLite.SQLiteException ex)
                     {
                         throw new Exception(ex.Message);
                     }
@@ -435,7 +434,7 @@ namespace Jyson.MyCodeManage.Utility
         }
 
 
-        private static void PrepareCommand(OleDbCommand cmd, OleDbConnection conn, OleDbTransaction trans, string cmdText, OleDbParameter[] cmdParms)
+        private static void PrepareCommand(SQLiteCommand cmd, SQLiteConnection conn, SQLiteTransaction trans, string cmdText, SQLiteParameter[] cmdParms)
         {
             if (conn.State != ConnectionState.Open)
                 conn.Open();
@@ -446,7 +445,7 @@ namespace Jyson.MyCodeManage.Utility
             cmd.CommandType = CommandType.Text;//cmdType;
             if (cmdParms != null)
             {
-                foreach (OleDbParameter parm in cmdParms)
+                foreach (SQLiteParameter parm in cmdParms)
                     cmd.Parameters.Add(parm);
             }
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jyson.MyCodeManage.UI.PPMoneyTool;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,11 +57,16 @@ namespace Jyson.MyCodeManage.UI
             LoadShowForm(codeManage);
 
         }
-        private void menuItemEInsureLog_Click(object sender, EventArgs e)
+        private void menuItemSMSCode_Click(object sender, EventArgs e)
         {
-            ProductCheckLog.frmEInsureLog frmEInsureLog = new ProductCheckLog.frmEInsureLog();
-            LoadShowForm(frmEInsureLog);
-        } 
+            frmSMSCode smsCode = new frmSMSCode();
+            LoadShowForm(smsCode);
+        }
+        //private void menuItemEInsureLog_Click(object sender, EventArgs e)
+        //{
+        //    ProductCheckLog.frmEInsureLog frmEInsureLog = new ProductCheckLog.frmEInsureLog();
+        //    LoadShowForm(frmEInsureLog);
+        //} 
         #endregion
 
 
@@ -118,16 +124,20 @@ namespace Jyson.MyCodeManage.UI
             return false;
         }
 
-
+        /// <summary>
+        /// 导航栏点击
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolBar_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             if (e.ClickedItem == toolBarB2BMemo)
                 menuItemB2BMemo_Click(null, null);
-            else if (e.ClickedItem == toolBarEinsureLog)
+            else if (e.ClickedItem == toolBarSMSCode)
             {
-                menuItemEInsureLog_Click(null, null);
+                menuItemSMSCode_Click(null, null);
             }
-            else if (e.ClickedItem ==toolBarMstsc)
+            else if (e.ClickedItem == toolBarMstsc)
             {
                 menuItemMstsc_Click(null, null);
             }
@@ -188,14 +198,19 @@ namespace Jyson.MyCodeManage.UI
 
         private void menuItemCalc_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("calc.exe");
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+            p.StartInfo.WorkingDirectory = Application.StartupPath + "/JsonView/";//要启动程序路径
+            p.StartInfo.FileName = "JsonView.exe";//需要启动的程序名   
+            p.Start();//启动     
+            //System.Diagnostics.Process.Start("calc.exe");
         }
 
         private void menuItemMstsc_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("mstsc.exe");
-        } 
+        }
         #endregion
+
 
     }
 }

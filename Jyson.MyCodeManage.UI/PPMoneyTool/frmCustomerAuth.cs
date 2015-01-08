@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Jyson.MyCodeManage.UI.ProductCheckLog
+namespace Jyson.MyCodeManage.UI.PPMoneyTool
 {
-    public partial class frmEInsureLog : BaseForm
+    public partial class frmCustomerAuth : Form
     {
-        public frmEInsureLog()
+        public frmCustomerAuth()
         {
             InitializeComponent();
+        }
+
+        private void frmCustomerAuth_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,3 +34,16 @@ G:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.Uti
 G:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\obj\Debug\Jyson.MyCodeManage.DAL.csprojResolveAssemblyReference.cache
 G:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\obj\Debug\Jyson.MyCodeManage.DAL.dll
 G:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\obj\Debug\Jyson.MyCodeManage.DAL.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.DAL.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.DAL.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.Model.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.Utility.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.Model.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.Utility.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\obj\Debug\Jyson.MyCodeManage.DAL.csprojResolveAssemblyReference.cache
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\obj\Debug\Jyson.MyCodeManage.DAL.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\obj\Debug\Jyson.MyCodeManage.DAL.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.DBUtility.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\MySql.Data.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\System.Data.SQLite.dll
+E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb
