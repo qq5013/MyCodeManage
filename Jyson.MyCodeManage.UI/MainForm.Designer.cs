@@ -52,6 +52,8 @@
             this.menuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.助手ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemB2BMemo = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemSMSCode = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemCustomerAuth = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemShowDocumentIcon = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemNotepad = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,11 +63,11 @@
             this.toolBar = new System.Windows.Forms.ToolStrip();
             this.toolBarB2BMemo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolBarMstsc = new System.Windows.Forms.ToolStripButton();
-            this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.menuItemSMSCode = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBarSMSCode = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolBarJsonFormat = new System.Windows.Forms.ToolStripButton();
+            this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.menuItemJsonFormat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolBar.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +82,7 @@
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(935, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1060, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,28 +100,28 @@
             // menuItemClose
             // 
             this.menuItemClose.Name = "menuItemClose";
-            this.menuItemClose.Size = new System.Drawing.Size(152, 22);
+            this.menuItemClose.Size = new System.Drawing.Size(148, 22);
             this.menuItemClose.Text = "关闭";
             this.menuItemClose.Click += new System.EventHandler(this.menuItemClose_Click);
             // 
             // menuItemCloseAll
             // 
             this.menuItemCloseAll.Name = "menuItemCloseAll";
-            this.menuItemCloseAll.Size = new System.Drawing.Size(152, 22);
+            this.menuItemCloseAll.Size = new System.Drawing.Size(148, 22);
             this.menuItemCloseAll.Text = "关闭全部";
             this.menuItemCloseAll.Click += new System.EventHandler(this.menuItemCloseAll_Click);
             // 
             // menuItemCloseAllButThisOne
             // 
             this.menuItemCloseAllButThisOne.Name = "menuItemCloseAllButThisOne";
-            this.menuItemCloseAllButThisOne.Size = new System.Drawing.Size(152, 22);
+            this.menuItemCloseAllButThisOne.Size = new System.Drawing.Size(148, 22);
             this.menuItemCloseAllButThisOne.Text = "关闭其它窗体";
             this.menuItemCloseAllButThisOne.Click += new System.EventHandler(this.menuItemCloseAllButThisOne_Click);
             // 
             // menuItemExit
             // 
             this.menuItemExit.Name = "menuItemExit";
-            this.menuItemExit.Size = new System.Drawing.Size(152, 22);
+            this.menuItemExit.Size = new System.Drawing.Size(148, 22);
             this.menuItemExit.Text = "退出";
             this.menuItemExit.Click += new System.EventHandler(this.menuItemExit_Click);
             // 
@@ -127,7 +129,9 @@
             // 
             this.助手ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemB2BMemo,
-            this.menuItemSMSCode});
+            this.menuItemSMSCode,
+            this.menuItemCustomerAuth,
+            this.menuItemJsonFormat});
             this.助手ToolStripMenuItem.Name = "助手ToolStripMenuItem";
             this.助手ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
             this.助手ToolStripMenuItem.Text = "助手(Z)";
@@ -138,6 +142,20 @@
             this.menuItemB2BMemo.Size = new System.Drawing.Size(152, 22);
             this.menuItemB2BMemo.Text = "PP备忘";
             this.menuItemB2BMemo.Click += new System.EventHandler(this.menuItemB2BMemo_Click);
+            // 
+            // menuItemSMSCode
+            // 
+            this.menuItemSMSCode.Name = "menuItemSMSCode";
+            this.menuItemSMSCode.Size = new System.Drawing.Size(152, 22);
+            this.menuItemSMSCode.Text = "SMS验证码";
+            this.menuItemSMSCode.Click += new System.EventHandler(this.menuItemSMSCode_Click);
+            // 
+            // menuItemCustomerAuth
+            // 
+            this.menuItemCustomerAuth.Name = "menuItemCustomerAuth";
+            this.menuItemCustomerAuth.Size = new System.Drawing.Size(152, 22);
+            this.menuItemCustomerAuth.Text = "用户认证";
+            this.menuItemCustomerAuth.Click += new System.EventHandler(this.menuItemCustomerAuth_Click);
             // 
             // 工具ToolStripMenuItem
             // 
@@ -195,10 +213,10 @@
             this.toolStripSeparator1,
             this.toolBarSMSCode,
             this.toolStripSeparator2,
-            this.toolBarMstsc});
+            this.toolBarJsonFormat});
             this.toolBar.Location = new System.Drawing.Point(0, 25);
             this.toolBar.Name = "toolBar";
-            this.toolBar.Size = new System.Drawing.Size(935, 39);
+            this.toolBar.Size = new System.Drawing.Size(1060, 39);
             this.toolBar.TabIndex = 1;
             this.toolBar.Text = "toolStrip1";
             this.toolBar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolBar_ItemClicked);
@@ -218,14 +236,28 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
-            // toolBarMstsc
+            // toolBarSMSCode
             // 
-            this.toolBarMstsc.Image = ((System.Drawing.Image)(resources.GetObject("toolBarMstsc.Image")));
-            this.toolBarMstsc.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBarMstsc.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBarMstsc.Name = "toolBarMstsc";
-            this.toolBarMstsc.Size = new System.Drawing.Size(92, 36);
-            this.toolBarMstsc.Text = "远程桌面";
+            this.toolBarSMSCode.Image = global::Jyson.MyCodeManage.UI.Properties.Resources.protect_yellow;
+            this.toolBarSMSCode.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBarSMSCode.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBarSMSCode.Name = "toolBarSMSCode";
+            this.toolBarSMSCode.Size = new System.Drawing.Size(106, 36);
+            this.toolBarSMSCode.Text = "SMS验证码";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolBarJsonFormat
+            // 
+            this.toolBarJsonFormat.Image = global::Jyson.MyCodeManage.UI.Properties.Resources.draw_tools;
+            this.toolBarJsonFormat.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBarJsonFormat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBarJsonFormat.Name = "toolBarJsonFormat";
+            this.toolBarJsonFormat.Size = new System.Drawing.Size(106, 36);
+            this.toolBarJsonFormat.Text = "Json格式化";
             // 
             // dockPanel
             // 
@@ -235,7 +267,7 @@
             this.dockPanel.Location = new System.Drawing.Point(0, 64);
             this.dockPanel.Name = "dockPanel";
             this.dockPanel.RightToLeftLayout = true;
-            this.dockPanel.Size = new System.Drawing.Size(935, 571);
+            this.dockPanel.Size = new System.Drawing.Size(1060, 662);
             dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
             dockPanelGradient1.StartColor = System.Drawing.SystemColors.ControlLight;
             autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
@@ -284,32 +316,19 @@
             this.dockPanel.Skin = dockPanelSkin1;
             this.dockPanel.TabIndex = 2;
             // 
-            // menuItemSMSCode
+            // menuItemJsonFormat
             // 
-            this.menuItemSMSCode.Name = "menuItemSMSCode";
-            this.menuItemSMSCode.Size = new System.Drawing.Size(152, 22);
-            this.menuItemSMSCode.Text = "SMS验证码";
-            this.menuItemSMSCode.Click += new System.EventHandler(this.menuItemSMSCode_Click);
-            // 
-            // toolBarSMSCode
-            // 
-            this.toolBarSMSCode.Image = ((System.Drawing.Image)(resources.GetObject("toolBarSMSCode.Image")));
-            this.toolBarSMSCode.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBarSMSCode.Name = "toolBarSMSCode";
-            this.toolBarSMSCode.Size = new System.Drawing.Size(90, 36);
-            this.toolBarSMSCode.Text = "SMS验证码";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            this.menuItemJsonFormat.Name = "menuItemJsonFormat";
+            this.menuItemJsonFormat.Size = new System.Drawing.Size(152, 22);
+            this.menuItemJsonFormat.Text = "Json格式化";
+            this.menuItemJsonFormat.Click += new System.EventHandler(this.menuItemJsonFormat_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(935, 635);
+            this.ClientSize = new System.Drawing.Size(1060, 726);
             this.Controls.Add(this.dockPanel);
             this.Controls.Add(this.toolBar);
             this.Controls.Add(this.menuStrip1);
@@ -349,10 +368,12 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemNotepad;
         private System.Windows.Forms.ToolStripMenuItem menuItemCalc;
         private System.Windows.Forms.ToolStripMenuItem menuItemMstsc;
-        private System.Windows.Forms.ToolStripButton toolBarMstsc;
+        private System.Windows.Forms.ToolStripButton toolBarJsonFormat;
         private System.Windows.Forms.ToolStripMenuItem menuItemSMSCode;
         private System.Windows.Forms.ToolStripButton toolBarSMSCode;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem menuItemCustomerAuth;
+        private System.Windows.Forms.ToolStripMenuItem menuItemJsonFormat;
 
     }
 }

@@ -41,10 +41,9 @@ namespace Jyson.MyCodeManage.UI.PPMoneyTool
                 //        );
                 //}
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
             }
 
         }

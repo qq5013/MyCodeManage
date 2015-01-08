@@ -47,3 +47,7 @@ E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.DBU
 E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\MySql.Data.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\System.Data.SQLite.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb
+G:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.DBUtility.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\MySql.Data.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\System.Data.SQLite.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.DAL\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb

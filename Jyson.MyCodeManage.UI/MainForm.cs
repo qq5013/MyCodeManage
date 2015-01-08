@@ -1,4 +1,5 @@
-﻿using Jyson.MyCodeManage.UI.PPMoneyTool;
+﻿using Jyson.MyCodeManage.UI.JsonFormat;
+using Jyson.MyCodeManage.UI.PPMoneyTool;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,11 +63,21 @@ namespace Jyson.MyCodeManage.UI
             frmSMSCode smsCode = new frmSMSCode();
             LoadShowForm(smsCode);
         }
-        //private void menuItemEInsureLog_Click(object sender, EventArgs e)
-        //{
-        //    ProductCheckLog.frmEInsureLog frmEInsureLog = new ProductCheckLog.frmEInsureLog();
-        //    LoadShowForm(frmEInsureLog);
-        //} 
+        /// <summary>
+        /// 用户认证
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menuItemCustomerAuth_Click(object sender, EventArgs e)
+        {
+            frmCustomerAuth customerAuth = new frmCustomerAuth();
+            customerAuth.ShowDialog();
+        }
+        private void menuItemJsonFormat_Click(object sender, EventArgs e)
+        {
+            frmJsonFormat jsonFormat = new frmJsonFormat();
+            LoadShowForm(jsonFormat);
+        }
         #endregion
 
 
@@ -137,9 +148,9 @@ namespace Jyson.MyCodeManage.UI
             {
                 menuItemSMSCode_Click(null, null);
             }
-            else if (e.ClickedItem == toolBarMstsc)
+            else if (e.ClickedItem == toolBarJsonFormat)
             {
-                menuItemMstsc_Click(null, null);
+                menuItemJsonFormat_Click(null, null);
             }
 
         }
@@ -198,11 +209,7 @@ namespace Jyson.MyCodeManage.UI
 
         private void menuItemCalc_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process p = new System.Diagnostics.Process();
-            p.StartInfo.WorkingDirectory = Application.StartupPath + "/JsonView/";//要启动程序路径
-            p.StartInfo.FileName = "JsonView.exe";//需要启动的程序名   
-            p.Start();//启动     
-            //System.Diagnostics.Process.Start("calc.exe");
+            System.Diagnostics.Process.Start("calc.exe");
         }
 
         private void menuItemMstsc_Click(object sender, EventArgs e)
@@ -210,6 +217,10 @@ namespace Jyson.MyCodeManage.UI
             System.Diagnostics.Process.Start("mstsc.exe");
         }
         #endregion
+
+
+
+
 
 
     }

@@ -35,10 +35,8 @@ G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.BLL
 G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.BLL.pdb
 G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.DAL.dll
 G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.Model.dll
-G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.Utility.dll
 G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.DAL.pdb
 G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.Model.pdb
-G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.Utility.pdb
 G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\obj\Debug\Jyson.MyCodeManage.BLL.csprojResolveAssemblyReference.cache
 G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\obj\Debug\Jyson.MyCodeManage.BLL.dll
 G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\obj\Debug\Jyson.MyCodeManage.BLL.pdb
@@ -55,3 +53,7 @@ E:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.DBU
 E:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\MySql.Data.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\System.Data.SQLite.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb
+G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.DBUtility.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\MySql.Data.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\System.Data.SQLite.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.BLL\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb

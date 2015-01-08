@@ -81,7 +81,6 @@ G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.frmCodeManage.resources
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\ServerSide.SplashScreen.frmSplash.resources
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.MainForm.resources
-G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.ProductCheckLog.frmEInsureLog.resources
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.Properties.Resources.resources
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.csproj.GenerateResource.Cache
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\Jyson.MyCodeManage.UI.exe.config
@@ -113,3 +112,10 @@ E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\MySql.Data.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\System.Data.SQLite.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.SMSCode.frmSMSCode.resources
+G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\Jyson.MyCodeManage.DBUtility.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\MySql.Data.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\System.Data.SQLite.dll
+G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb
+G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmCustomerAuth.resources
+G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmSMSCode.resources
+G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.JsonFormat.frmJsonFormat.resources

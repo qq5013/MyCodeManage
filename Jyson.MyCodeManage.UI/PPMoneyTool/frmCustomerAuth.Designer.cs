@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -86,15 +86,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "姓：";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(156, 224);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 27);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "确定认证";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -104,13 +95,25 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "实名认证、绑定银行卡、绑定微信、邮箱认证、登录免验证码";
             // 
+            // btnSave
+            // 
+            this.btnSave.Image = global::Jyson.MyCodeManage.UI.Properties.Resources._01;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(156, 223);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(80, 27);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "确认认证";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
             // frmCustomerAuth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 306);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtName);
@@ -118,6 +121,7 @@
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label1);
             this.Name = "frmCustomerAuth";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "用户认证";
             this.Load += new System.EventHandler(this.frmCustomerAuth_Load);
             this.ResumeLayout(false);
@@ -133,7 +137,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnSave;
     }
 }

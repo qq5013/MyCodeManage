@@ -72,13 +72,19 @@
     <Compile Include="CodeManage\frmCodeManage.Designer.cs">
       <DependentUpon>frmCodeManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSplash.cs">
+    <Compile Include="JsonFormat\frmJsonFormat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSplash.designer.cs">
+    <Compile Include="JsonFormat\frmJsonFormat.Designer.cs">
+      <DependentUpon>frmJsonFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\frmSplash.designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="ISplashForm.cs" />
+    <Compile Include="Splash\ISplashForm.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,7 +105,7 @@
     <Compile Include="PPMoneyTool\frmSMSCode.Designer.cs">
       <DependentUpon>frmSMSCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="Splasher.cs" />
+    <Compile Include="Splash\Splasher.cs" />
     <EmbeddedResource Include="CodeManage\frmCodeType.resx">
       <DependentUpon>frmCodeType.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,7 +115,10 @@
     <EmbeddedResource Include="CodeManage\frmCodeManage.resx">
       <DependentUpon>frmCodeManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSplash.resx">
+    <EmbeddedResource Include="JsonFormat\frmJsonFormat.resx">
+      <DependentUpon>frmJsonFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -394,6 +403,9 @@
     <Content Include="bin\Debug\web\themes\qq\qq.css" />
     <Content Include="bin\Debug\web\themes\simple\simple.css" />
     <Content Include="bin\Debug\web\zh_CN.js" />
+    <None Include="Resources\draw_tools.png" />
+    <None Include="Resources\protect yellow.png" />
+    <None Include="Resources\security red.png" />
     <None Include="Resources\monitor.png" />
     <None Include="Resources\29.ico" />
     <None Include="Resources\endorse.gif" />
