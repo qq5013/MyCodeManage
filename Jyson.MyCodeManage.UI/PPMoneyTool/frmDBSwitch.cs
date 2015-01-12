@@ -22,18 +22,26 @@ namespace Jyson.MyCodeManage.UI.PPMoneyTool
         {
             if (rdoRelease.Checked)
             {
-                ini.IniWriteValue("DB", "Connection", "release");
+                ini.IniWriteValue("DataBase", "Connection", "release");
             }
             else
             {
-                ini.IniWriteValue("DB", "Connection", "test");
+                ini.IniWriteValue("DataBase", "Connection", "test");
             }
-            MsgBox.MsgBoxOK("");
+            MsgBox.MsgBoxOK("保存成功");
         }
 
         private void frmDBSwitch_Load(object sender, EventArgs e)
         {
-
+            string strConn = ini.IniReadValue("DataBase", "Connection");
+            if (strConn=="test")
+            {
+                rdoTest.Checked = true;
+            }
+            else
+            {
+                rdoRelease.Checked = true;
+            }
         }
     }
 }

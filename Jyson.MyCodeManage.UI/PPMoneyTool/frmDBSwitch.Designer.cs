@@ -77,6 +77,7 @@
             this.Controls.Add(this.rdoTest);
             this.Controls.Add(this.rdoRelease);
             this.Name = "frmDBSwitch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "切换数据库";
             this.Load += new System.EventHandler(this.frmDBSwitch_Load);
             this.ResumeLayout(false);
