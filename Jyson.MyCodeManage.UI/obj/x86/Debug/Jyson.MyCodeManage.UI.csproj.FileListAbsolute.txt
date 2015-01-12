@@ -111,7 +111,6 @@ E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\Jyson.MyCodeManage.DBUt
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\MySql.Data.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\System.Data.SQLite.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\Jyson.MyCodeManage.DBUtility.pdb
-E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.SMSCode.frmSMSCode.resources
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\Jyson.MyCodeManage.DBUtility.dll
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\MySql.Data.dll
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\System.Data.SQLite.dll
@@ -119,3 +118,6 @@ G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\bin\Debug\Jyson.MyCodeManage.DBUt
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmCustomerAuth.resources
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmSMSCode.resources
 G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.JsonFormat.frmJsonFormat.resources
+E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.JsonFormat.frmJsonFormat.resources
+E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmCustomerAuth.resources
+E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmSMSCode.resources
