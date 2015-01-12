@@ -121,3 +121,4 @@ G:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.JsonFormat.frmJsonFormat.resources
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmCustomerAuth.resources
 E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmSMSCode.resources
+E:\solution\MyCodeManage\Jyson.MyCodeManage.UI\obj\x86\Debug\Jyson.MyCodeManage.UI.PPMoneyTool.frmDBSwitch.resources

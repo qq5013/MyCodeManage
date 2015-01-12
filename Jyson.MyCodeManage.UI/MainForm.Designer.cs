@@ -54,6 +54,7 @@
             this.menuItemB2BMemo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemSMSCode = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemCustomerAuth = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemJsonFormat = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemShowDocumentIcon = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemNotepad = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolBarJsonFormat = new System.Windows.Forms.ToolStripButton();
             this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.menuItemJsonFormat = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemDBSwitch = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolBar.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +93,7 @@
             this.menuItemClose,
             this.menuItemCloseAll,
             this.menuItemCloseAllButThisOne,
+            this.menuItemDBSwitch,
             this.menuItemExit});
             this.menuItemFile.Name = "menuItemFile";
             this.menuItemFile.Size = new System.Drawing.Size(58, 21);
@@ -100,28 +102,28 @@
             // menuItemClose
             // 
             this.menuItemClose.Name = "menuItemClose";
-            this.menuItemClose.Size = new System.Drawing.Size(148, 22);
+            this.menuItemClose.Size = new System.Drawing.Size(152, 22);
             this.menuItemClose.Text = "关闭";
             this.menuItemClose.Click += new System.EventHandler(this.menuItemClose_Click);
             // 
             // menuItemCloseAll
             // 
             this.menuItemCloseAll.Name = "menuItemCloseAll";
-            this.menuItemCloseAll.Size = new System.Drawing.Size(148, 22);
+            this.menuItemCloseAll.Size = new System.Drawing.Size(152, 22);
             this.menuItemCloseAll.Text = "关闭全部";
             this.menuItemCloseAll.Click += new System.EventHandler(this.menuItemCloseAll_Click);
             // 
             // menuItemCloseAllButThisOne
             // 
             this.menuItemCloseAllButThisOne.Name = "menuItemCloseAllButThisOne";
-            this.menuItemCloseAllButThisOne.Size = new System.Drawing.Size(148, 22);
+            this.menuItemCloseAllButThisOne.Size = new System.Drawing.Size(152, 22);
             this.menuItemCloseAllButThisOne.Text = "关闭其它窗体";
             this.menuItemCloseAllButThisOne.Click += new System.EventHandler(this.menuItemCloseAllButThisOne_Click);
             // 
             // menuItemExit
             // 
             this.menuItemExit.Name = "menuItemExit";
-            this.menuItemExit.Size = new System.Drawing.Size(148, 22);
+            this.menuItemExit.Size = new System.Drawing.Size(152, 22);
             this.menuItemExit.Text = "退出";
             this.menuItemExit.Click += new System.EventHandler(this.menuItemExit_Click);
             // 
@@ -139,23 +141,30 @@
             // menuItemB2BMemo
             // 
             this.menuItemB2BMemo.Name = "menuItemB2BMemo";
-            this.menuItemB2BMemo.Size = new System.Drawing.Size(152, 22);
+            this.menuItemB2BMemo.Size = new System.Drawing.Size(138, 22);
             this.menuItemB2BMemo.Text = "PP备忘";
             this.menuItemB2BMemo.Click += new System.EventHandler(this.menuItemB2BMemo_Click);
             // 
             // menuItemSMSCode
             // 
             this.menuItemSMSCode.Name = "menuItemSMSCode";
-            this.menuItemSMSCode.Size = new System.Drawing.Size(152, 22);
+            this.menuItemSMSCode.Size = new System.Drawing.Size(138, 22);
             this.menuItemSMSCode.Text = "SMS验证码";
             this.menuItemSMSCode.Click += new System.EventHandler(this.menuItemSMSCode_Click);
             // 
             // menuItemCustomerAuth
             // 
             this.menuItemCustomerAuth.Name = "menuItemCustomerAuth";
-            this.menuItemCustomerAuth.Size = new System.Drawing.Size(152, 22);
+            this.menuItemCustomerAuth.Size = new System.Drawing.Size(138, 22);
             this.menuItemCustomerAuth.Text = "用户认证";
             this.menuItemCustomerAuth.Click += new System.EventHandler(this.menuItemCustomerAuth_Click);
+            // 
+            // menuItemJsonFormat
+            // 
+            this.menuItemJsonFormat.Name = "menuItemJsonFormat";
+            this.menuItemJsonFormat.Size = new System.Drawing.Size(138, 22);
+            this.menuItemJsonFormat.Text = "Json格式化";
+            this.menuItemJsonFormat.Click += new System.EventHandler(this.menuItemJsonFormat_Click);
             // 
             // 工具ToolStripMenuItem
             // 
@@ -316,12 +325,12 @@
             this.dockPanel.Skin = dockPanelSkin1;
             this.dockPanel.TabIndex = 2;
             // 
-            // menuItemJsonFormat
+            // menuItemDBSwitch
             // 
-            this.menuItemJsonFormat.Name = "menuItemJsonFormat";
-            this.menuItemJsonFormat.Size = new System.Drawing.Size(152, 22);
-            this.menuItemJsonFormat.Text = "Json格式化";
-            this.menuItemJsonFormat.Click += new System.EventHandler(this.menuItemJsonFormat_Click);
+            this.menuItemDBSwitch.Name = "menuItemDBSwitch";
+            this.menuItemDBSwitch.Size = new System.Drawing.Size(152, 22);
+            this.menuItemDBSwitch.Text = "切换数据库";
+            this.menuItemDBSwitch.Click += new System.EventHandler(this.menuItemDBSwitch_Click);
             // 
             // MainForm
             // 
@@ -374,6 +383,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem menuItemCustomerAuth;
         private System.Windows.Forms.ToolStripMenuItem menuItemJsonFormat;
+        private System.Windows.Forms.ToolStripMenuItem menuItemDBSwitch;
 
     }
 }

@@ -218,6 +218,17 @@ namespace Jyson.MyCodeManage.UI
         }
         #endregion
 
+        /// <summary>
+        /// 切换数据库
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menuItemDBSwitch_Click(object sender, EventArgs e)
+        {
+            frmDBSwitch dbSwitch = new frmDBSwitch();
+            dbSwitch.ShowDialog();
+        }
+
 
 
 

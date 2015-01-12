@@ -210,7 +210,12 @@ namespace Jyson.MyCodeManage.UI
                 List<Model.CodeType> list = codeTypeBll.GetModelList("").OrderBy(m => m.OrderNo).ToList();
                 foreach (Model.CodeType item in list)
                 {
-                    TreeNode tn = tvwContent.Nodes.Add("0", item.TypeName);
+                    TreeNode tn = new TreeNode();
+                    tn.Tag = item.Id;
+                    tn.Name = "0";
+                    tn.Text = item.TypeName;
+                    tvwContent.Nodes.Add(tn);
+                    //TreeNode tn = tvwContent.Nodes.Add("0", item.TypeName);
                     List<Model.CodeContent> codeContentList = codeContentBll.GetModelList("").Where(m => m.CodeTypeId == item.Id).Where(m => m.Title.Contains(txtKeys.Text.Trim()) || m.Remark.Contains(txtKeys.Text.Trim())).ToList();
                     foreach (Model.CodeContent contentList in codeContentList)
                     {
@@ -223,7 +228,12 @@ namespace Jyson.MyCodeManage.UI
                 List<Model.CodeType> list = codeTypeBll.GetModelList("").Where(m => m.Id == int.Parse(cboCodeType.SelectedValue.ToString())).OrderBy(m => m.OrderNo).ToList();
                 foreach (Model.CodeType item in list)
                 {
-                    TreeNode tn = tvwContent.Nodes.Add("0", item.TypeName);
+                    TreeNode tn = new TreeNode();
+                    tn.Tag = item.Id;
+                    tn.Name = "0";
+                    tn.Text = item.TypeName;
+                    tvwContent.Nodes.Add(tn);
+                    //TreeNode tn = tvwContent.Nodes.Add("0", item.TypeName);
                     List<Model.CodeContent> codeContentList = new List<Model.CodeContent>();
                     if (string.IsNullOrEmpty(txtKeys.Text))
                     {

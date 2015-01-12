@@ -78,6 +78,12 @@
     <Compile Include="JsonFormat\frmJsonFormat.Designer.cs">
       <DependentUpon>frmJsonFormat.cs</DependentUpon>
     </Compile>
+    <Compile Include="PPMoneyTool\frmDBSwitch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPMoneyTool\frmDBSwitch.Designer.cs">
+      <DependentUpon>frmDBSwitch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Splash\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JsonFormat\frmJsonFormat.resx">
       <DependentUpon>frmJsonFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPMoneyTool\frmDBSwitch.resx">
+      <DependentUpon>frmDBSwitch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>

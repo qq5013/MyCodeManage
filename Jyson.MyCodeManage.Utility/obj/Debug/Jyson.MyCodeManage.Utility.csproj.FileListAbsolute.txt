@@ -20,3 +20,4 @@ E:\solution\MyCodeManage\Jyson.MyCodeManage.Utility\bin\Debug\Jyson.MyCodeManage
 E:\solution\MyCodeManage\Jyson.MyCodeManage.Utility\bin\Debug\Jyson.MyCodeManage.Utility.pdb
 E:\solution\MyCodeManage\Jyson.MyCodeManage.Utility\obj\Debug\Jyson.MyCodeManage.Utility.dll
 E:\solution\MyCodeManage\Jyson.MyCodeManage.Utility\obj\Debug\Jyson.MyCodeManage.Utility.pdb
+E:\solution\MyCodeManage\Jyson.MyCodeManage.Utility\obj\Debug\Jyson.MyCodeManage.Utility.csprojResolveAssemblyReference.cache
